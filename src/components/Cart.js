@@ -24,7 +24,7 @@ const Cart = () => {
 
     return (cartData.length === 0)?<center><h2>Opps! Your cart is empty.</h2></center>:(
         <div style={{display:"flex", flexDirection:"Column",alignItems:"center",marginTop:"20px"}}>
-            <button onClick={removeCart}>Empty Cart</button>
+            <button onClick={removeCart} className="empty-card">Empty Cart</button>
             <div className="cartData">
                 <CatagoryItems itemsList={{items:filteredCartData}}/>
             </div>

@@ -28,7 +28,7 @@ else{
           <input type="text" className="search" placeholder="Search" value={searchValue} onChange={(e) => {
             setSearchValue(e.target.value);
           } }></input>
-          <button onClick={searchData}>search</button>
+          <button className='btn-filter' onClick={searchData}>Search</button>
         </div>
         <div className="res-container">
           {filterData.map((restaurant, index) => {

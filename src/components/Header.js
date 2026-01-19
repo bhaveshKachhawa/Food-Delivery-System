@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 
 const Header = () => {
-  const [btn, setBtn] = useState("Login");
   const cartData = useSelector((store) => store.cart.items);
   return (
     <div className="header">
@@ -17,7 +16,6 @@ const Header = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about-us">About us</Link></li>
         <li><Link to="/cart">Cart ({cartData.length})</Link></li>
-        <li><button className="login-btn" onClick={()=>btn === "Login"?setBtn("Log-out"):setBtn("Login")}>{btn}</button></li>
       </ul>
     </div>
     </div>
